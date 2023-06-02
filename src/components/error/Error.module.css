@@ -1,0 +1,40 @@
+.errorContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 70px;
+}
+
+.error{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.errorBtn{
+    width: 150px;
+    height: 40px;
+    
+    border: none;
+    border-radius: 5px;
+    
+    background-color: #d6c66d;
+    color: #f1f1f1;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    
+    cursor: pointer;
+    
+    transition: 0.2s;
+
+}
+
+
+@media (max-width: 1280px) {
+    .errorContainer{
+        padding: 0 50px 50px 50px;
+
+        text-align: center;
+    }
+}

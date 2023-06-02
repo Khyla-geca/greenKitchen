@@ -1,0 +1,180 @@
+/* Form */
+
+.form{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+/* Input text (search bar) */
+
+.searchBar{
+    width: 520px;
+    height: 45px;
+
+    border: none;
+    border-radius: 5px 0 0 5px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #343434;
+
+    padding: 15px;
+
+    margin-bottom: 100px;
+}
+
+.searchBar:focus{
+    outline: none;
+}
+
+/* submit button */
+
+.submitBtn{
+    width: 70px;
+    height: 45px;
+
+    border: none;
+    border-radius: 0 5px 5px 0;
+
+    background-color: #d6c66d;
+    color: #201717;
+
+    font-family: 'Montserrat', sans-serif;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* select inputs (cuisine, intolerance) */
+
+.cuisineSelect, .intoleranceSelect{
+    width: 120px;
+    height: 45px;
+
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+
+    cursor: pointer;
+
+    border: none;
+   
+
+    background-color: #e6deb9;
+    color: #201717;
+}
+
+.intoleranceSelect{
+    margin: 0 50px 0 30px;
+}
+
+.cuisineSelect:focus, .intoleranceSelect:focus{
+    outline: none;
+}
+
+/* Card container */
+
+.cardsContainer{
+    margin: 0 50px 50px 50px;
+
+    display: grid;
+    justify-items: center;
+    row-gap: 70px;
+    grid-template-columns: repeat(auto-fill, 450px);
+}
+
+/* Tablets */
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .form{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .form > div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .searchBar{
+        width: 350px;
+
+        margin-bottom: 20px;
+        
+        font-size: 14px;
+    }
+
+    .submitBtn{
+        width: 70px;
+        
+        font-size: 14px;
+    }
+
+    .intoleranceSelect{
+        margin: 0 0 60px 30px;
+    }
+
+    .cardsContainer{
+        width: 90%;
+
+        margin: 0 auto 70px auto;
+        grid-template-columns: auto auto;
+    }
+}
+
+/* Big screen tablets */
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+    .cardsContainer{
+        width: 90%;
+
+        margin: 0 auto 70px auto;
+        grid-template-columns: auto auto auto;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .form{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .form > div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .searchBar{
+        width: 90%;
+
+        margin-bottom: 20px;
+        
+        font-size: 14px;
+    }
+
+    .submitBtn{
+        width: 30%;
+        
+        font-size: 14px;
+    }
+
+    .intoleranceSelect{
+        margin: 0 0 60px 30px;
+    }
+
+    .cardsContainer{
+        width: 80%;
+
+        margin: 0 auto 70px auto;
+        grid-template-columns: auto;
+    }
+}

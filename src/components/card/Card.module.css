@@ -1,0 +1,100 @@
+.card{
+    width: 320px;
+    height: fit-content;
+
+    text-align: center;
+
+    background-color: #d6c66d;
+    color: #201717;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.321);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    padding-bottom: 20px;
+
+    position: relative;
+}
+
+.card:hover{
+    display: inline-block;
+
+    width: 340px;
+}
+
+/* Card image */
+
+.cardImage{
+    width: 320px;
+    height: 250px;
+
+    object-fit: cover;
+
+    margin-bottom: 8px;
+
+    transition: 0.3s;
+}
+
+.card:hover .cardImage{
+    width: 340px;
+}
+
+/* Card info (name and minutes) */
+
+.cardName{
+    max-width: 230px;
+    margin: 0 auto 7px auto;
+
+    font-size: 16px;
+}
+
+.cardMinutes{
+    font-size: 14px;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+/* Tablets */
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .card{
+        width: 90%;
+        margin: auto;
+    }
+
+    .cardImage{
+        width: 100%;
+    }
+
+    .card:hover{
+        width: 100%;
+    }
+
+    .card:hover .cardImage{
+        width: 100%;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+    .card{
+        width: 100%;
+    }
+
+    .cardImage{
+        width: 100%;
+    }
+
+    .card:hover{
+        width: 100%;
+    }
+
+    .card:hover .cardImage{
+        width: 100%;
+    }
+}
