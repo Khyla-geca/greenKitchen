@@ -3,7 +3,7 @@ import { APIContext } from "../../APIContext"
 
 import HomeCSS from "./Home.module.css"
 
-import Card from "../card/Card"
+import Card from "../../components/card/Card"
 
 const Home = () => {
 
@@ -13,13 +13,16 @@ const Home = () => {
     const [intolerance, setIntolerance] = useState("")
 
     const {data, APICall} = useContext(APIContext)
+    
+   
 
     useEffect(() => {
 
-      APICall(`https://api.spoonacular.com/recipes/complexSearch?apiKey=898ddcc16621405e8b3cafa261cb7611&query=${search}&cuisine=${cuisine}&intolerances=${intolerance}&diet=vegetarian&addRecipeInformation=true`)
+      APICall(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${search}&cuisine=${cuisine}&intolerances=${intolerance}&diet=vegetarian&addRecipeInformation=true`)
       // eslint-disable-next-line
     }, [search, cuisine, intolerance])
   
+
     //onSubmit function
 
     const putValue = (e) => {
@@ -61,7 +64,7 @@ const Home = () => {
                 onChange={(event) => setValue(event.target.value)}
                 />
 
-                <button className={HomeCSS.submitBtn}>explore</button>
+                <button className={HomeCSS.submitBtn}>Explore</button>
               </div>
             </form>
 
@@ -81,6 +84,7 @@ const Home = () => {
               )}
 
             </div>  
+
         </>    
     )
 }

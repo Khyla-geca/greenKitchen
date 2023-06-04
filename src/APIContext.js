@@ -8,7 +8,7 @@ const APIContextProvider = (props) => {
     const [data, setData] = useState({results: [], extendedIngredients: []})
 
     const APICall = (url) => {
-        axios.get(url).then(res => setData(res.data))
+        axios.get(url).then(res => setData(res.data));
     } 
 
     return (

@@ -6,8 +6,8 @@ import "./App.css";
 //Components
 
 import Header from "./components/header/Header"
-import Home from "./components/home/Home"
-import Recipe from "./components/recipe/Recipe"
+import Home from "./pages/home/Home"
+import Recipe from "./pages/recipe/Recipe"
 import Error from "./components/error/Error"
 
 // function to scroll towards the top of the page when you open some recipe
